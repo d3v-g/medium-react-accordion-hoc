@@ -1,14 +1,18 @@
-import Accordion from "./Accordion";
+import Accordion from "./Accordion"
 import triangle_down from "./assets/triangle-down.svg"
 
 export default function SubmenuExample() {
     return (
         <Accordion
             controllerElement={(isExpanded) => (
-            <div className="flex flex-row bg-gradient-to-tr from-red-400 to-orange-400 p-2 rounded-lg cursor-pointer">
-                {isExpanded ? "Hide" : "Show"} Content
-                <img src={triangle_down} alt="triangle" className={isExpanded ? "rotate-180" : ""} />
-            </div>
+                <div className="flex flex-row bg-gradient-to-tr from-red-400 to-orange-400 p-2 rounded-lg cursor-pointer">
+                    {isExpanded ? "Hide" : "Show"} Content
+                    <img
+                        src={triangle_down}
+                        alt="triangle"
+                        className={isExpanded ? "rotate-180" : ""}
+                    />
+                </div>
             )}
             contentDescription="submenu example list"
             size="lg"
@@ -18,7 +22,11 @@ export default function SubmenuExample() {
                     controllerElement={(isExpanded) => (
                         <li className="flex cursor-pointer">
                             Item 1
-                            <img src={triangle_down} alt="triangle" className={isExpanded ? "rotate-180" : ""} />
+                            <img
+                                src={triangle_down}
+                                alt="triangle"
+                                className={isExpanded ? "rotate-180" : ""}
+                            />
                         </li>
                     )}
                     contentDescription="submenu example list subitem 1"
@@ -34,7 +42,11 @@ export default function SubmenuExample() {
                     controllerElement={(isExpanded) => (
                         <li className="flex cursor-pointer">
                             Item 2
-                            <img src={triangle_down} alt="triangle" className={isExpanded ? "rotate-180" : ""} />
+                            <img
+                                src={triangle_down}
+                                alt="triangle"
+                                className={isExpanded ? "rotate-180" : ""}
+                            />
                         </li>
                     )}
                     contentDescription="submenu example list subitem 2"
@@ -50,7 +62,11 @@ export default function SubmenuExample() {
                     controllerElement={(isExpanded) => (
                         <li className="flex cursor-pointer">
                             Item 3
-                            <img src={triangle_down} alt="triangle" className={isExpanded ? "rotate-180" : ""} />
+                            <img
+                                src={triangle_down}
+                                alt="triangle"
+                                className={isExpanded ? "rotate-180" : ""}
+                            />
                         </li>
                     )}
                     contentDescription="submenu example list subitem 3"
