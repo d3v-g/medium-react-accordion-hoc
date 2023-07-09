@@ -5,14 +5,14 @@ export default function MenuExample() {
     return (
         <Accordion
             controllerElement={(isExpanded) => (
-                <div className="flex flex-row bg-gradient-to-tr from-red-400 to-orange-400 p-2 rounded-lg cursor-pointer">
+                <button className="flex flex-row bg-gradient-to-tr from-red-400 to-orange-400 p-2 rounded-lg cursor-pointer">
                     {isExpanded ? "Hide" : "Show"} Content
                     <img
                         src={triangle_down}
                         alt="triangle"
                         className={isExpanded ? "rotate-180" : ""}
                     />
-                </div>
+                </button>
             )}
             contentDescription="menu example items"
             size="sm"
