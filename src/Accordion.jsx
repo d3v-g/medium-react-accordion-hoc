@@ -1,10 +1,14 @@
 import { useState } from "react"
 
-const Accordion = ({controllerElement, contentDescription, children}) => {
+const Accordion = ({controllerElement, contentDescription, size="sm", children}) => {
     const [isExpanded, setIsExpanded] = useState(false)
 
     return (
-        <>
+        <div className={
+            size === "sm" ? "w-28" : "" + 
+            size === "md" ? "w-40" : "" + 
+            size === "lg" ? "w-80" : ""
+        }>
             <div
                 aria-expanded={isExpanded}
                 aria-controls={contentDescription}
@@ -13,8 +17,8 @@ const Accordion = ({controllerElement, contentDescription, children}) => {
             >
                 {controllerElement(isExpanded)}
             </div>
-            {isExpanded && <div id={contentDescription}>{children}</div>}
-        </>
+            {isExpanded && <div id={contentDescription} className="w-full">{children}</div>}
+        </div>
     )
 }
 
