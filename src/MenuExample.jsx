@@ -5,7 +5,7 @@ export default function MenuExample() {
     return (
         <Accordion
             controllerElement={(isExpanded) => (
-                <button className="flex flex-row bg-gradient-to-tr from-red-400 to-orange-400 p-2 rounded-lg cursor-pointer">
+                <button className="w-full flex flex-row bg-gradient-to-tr from-red-400 to-orange-400 p-2 rounded-lg cursor-pointer">
                     {isExpanded ? "Hide" : "Show"} Content
                     <img
                         src={triangle_down}
